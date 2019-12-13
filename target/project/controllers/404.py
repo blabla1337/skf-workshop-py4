@@ -38,7 +38,7 @@ def page_not_found(e):
 									<img src="/static/images/cm-logo.png" style="width: 30%; height: 30%;" alt="">
                                     <p>The page you where looking for at <b>{0}</b>, was not found! </p>
                                    
-                                    <p>Please follow this link to return to <a href="/dashboard" style="color:blue;">home</a></p>
+                                    <p>Please follow this link to return to <a href="/dashboard/1" style="color:blue;">home</a></p>
 								</div><!--cm-logo end-->	
 								<img src="/static/images/cm-main-img.png" alt="">			
 							</div><!--cmp-info end-->

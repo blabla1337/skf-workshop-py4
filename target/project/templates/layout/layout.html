@@ -46,29 +46,23 @@
 								</a>
 								<ul>
 									<li><a href="/companies" title="">Companies</a></li>
+									{% if session['loggedin'] %}
 									<li><a href="/companies/new" title="">Add Company Profile</a></li>
+									{% endif %}
 								</ul>
 							</li>
-                            {% if session['loggedin'] %}
 							<li>
 								<a href="/profile" title="">
 									<span><img src="/static/images/icon4.png" alt=""></span>
 									Profiles
 								</a>
 								<ul>
+									{% if session['loggedin'] %}
 									<li><a href="/profile" title="">User Profile</a></li>
+									{% endif %} 
 									<li><a href="/profile/all" title="">All profiles</a></li>
 								</ul>
 							</li>
-                            {% endif %} 
-                            {% if session['loggedin'] %}
-							<li>
-								<a href="/messages" title="" class="not-box-open">
-									<span><img src="/static/images/icon6.png" alt=""></span>
-									Messages
-								</a>
-                            </li>
-                            {% endif %} 
 						</ul>
 					</nav><!--nav end-->
 					<div class="menu-btn">
