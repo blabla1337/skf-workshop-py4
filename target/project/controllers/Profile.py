@@ -86,5 +86,5 @@ def profile_uploads():
             user_prof = sqli.storePic(session['userId'], filename)
             return render_template("profile/edit.html",uploaded = uploaded)
         uploaded = "something went wrong, please try again. If the problem is repetitive please contact an administrator!"
-        return render_template("profile/edit.html",uploaded = uploaded)
+        return render_template("profile/edit.html", uploaded = uploaded , username = username, name=name, pic=pic, banner=banner, title=title, exp=exp, linkedin=linkedin, desc=desc, user_id=user_id)
     return render_template("profile/edit.html")
