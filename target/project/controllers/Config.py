@@ -20,4 +20,4 @@ def config_input(input):
     
 @app.route("/config", methods=['GET'])
 def config(): 
-    return render_template("config/index.html")
+    return render_template("config/index.html" , content = "", msg="")
