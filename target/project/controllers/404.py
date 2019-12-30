@@ -67,8 +67,10 @@ def page_not_found(e):
 </body>
 </html>
 """.format(request.url)
+    #the idea is not to do XSS...
     url = request.url
-    if "script" in url.lower():
+    a = ['script', 'img', 'iframe', 'body', 'input', 'style', 'svg', 'link', 'bgsound', 'meta', 'table', 'div', 'base', 'href', 'object']
+    if any(x in url.lower() for x in a):
         return redirect("/about", code=302)
     else:
         return render_template_string(template), 404
