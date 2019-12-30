@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 from project import app
-from flask import render_template, request, render_template_string
+from flask import render_template, request, render_template_string, redirect
+
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found(e):	
     template = """
 <!DOCTYPE html>
 <html>
@@ -66,4 +67,8 @@ def page_not_found(e):
 </body>
 </html>
 """.format(request.url)
-    return render_template_string(template), 404
+    url = request.url
+    if "script" in url.lower():
+        return redirect("/about", code=302)
+    else:
+        return render_template_string(template), 404
